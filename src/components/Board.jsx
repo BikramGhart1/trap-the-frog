@@ -2,7 +2,7 @@ import { useState } from "react";
 import "../App.css";
 
 const GRID_SIZE = 12;
-const FROG_START = { row: 0, col: 0 };
+const FROG_START = { row: 5, col: 8 };
 
 function Board() {
   const [grid, setGrid] = useState(
