@@ -1,12 +1,13 @@
 import './App.css'
+import Board from './components/Board'
 
 function App() {
 
   return (
     <>
-      <div className="container py-5">
-        <h1 className="text-warning">Trap The Frog</h1>
-        <p>Guys please contribute</p>
+      <div className="app-container" >
+        <h1 className="fs-5" style={{color:"#e0ffefff"}}>Trap The Frog</h1>
+        <Board/>
         </div>      
     </>
   )
