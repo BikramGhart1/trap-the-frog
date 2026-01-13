@@ -25,7 +25,7 @@ body {
 } */
 .board {
   display: grid;
-  gap: 10px;          /* spacing between tiles */
+  gap: 8px;          /* spacing between tiles */
   background-color: #27272b;
   padding: 20px;
   border-radius: 10px;
