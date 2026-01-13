@@ -36,6 +36,7 @@ function Board({setMoves}) {
         r.map((cell, cIdx) => (rIdx === row && cIdx === col ? !cell : cell))
       )
     );
+    setMoves();
     // frogStart.row += 1;
     // frogStart.col -= 1;
     // setFrogStart((prev)=>({
@@ -78,6 +79,11 @@ function Board({setMoves}) {
   }
 
   useEffect(()=>{
+    
+    if(isTrapped(frogStart.row, frogStart.col)){
+      alert("Frog Trapped! You win.");
+      return;
+    }
     moveFrog();
   },[grid])
 
@@ -87,9 +93,6 @@ function Board({setMoves}) {
       return;
     }
 
-    if(isTrapped(frogStart.row, frogStart.col)){
-      alert("Frog Trapped! You win.")
-    }
   },[frogStart]);
 
   return (
