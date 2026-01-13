@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import {motion} from 'framer-motion';
 import "../App.css";
 
 const GRID_SIZE = 12;
@@ -109,7 +110,15 @@ function Board({setMoves}) {
               className={`tile ${cell ? "obstacle" : "empty"}`} // toggle class
               onClick={() => toggleTile(ridx, cidx)}
             >
-              {isFrog && <p className="text-center ">🐸</p>}
+              {isFrog && 
+              <motion.div className="frog" animate={{
+                x:frogStart.col*0.5,
+                y:frogStart.row*0.5,
+              }}
+              transition={{type:"spring", stiffness:300, damping:20}}
+              >
+              🐸
+              </motion.div>}
             </div>
           );
         })
